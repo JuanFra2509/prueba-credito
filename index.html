@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CREDITOS</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- área de menú -->
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">BANCO AZTECA</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" id="itemProductos">Productos</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" id="itemPlazos">Plazos</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#" id="itemCreditos">Créditos</a>
+
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <button class="btn btn-primary" id="sidebarToggle">Menú</button>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+
+                    <!-- Inicio sección de productos -->
+                    <div class="col-12" style="display: none;" id="divProductos">
+                        <h1 class="mt-4">Productos</h1>
+                        <!--Inicio menú productos -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Agregar</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="listaProductos" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Lista</button>
+                            </li>
+                          </ul>
+                          <!--Fin menú productos -->
+
+                          <!-- Inicio formulario de registro Productos -->
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <form class="row mt-4" method="post" id="formAltaProd">
+                                    <div class="form-group col-sm-12 col-md-2">
+                                        <label for="sku">SKU</label>
+                                        <input type="number" class="form-control" name="sku" id="sku" required>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-3">
+                                        <label for="nombre">NOMBRE PRODUCTO</label>
+                                        <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-5">
+                                        <label for="descripcion">DESCRIPCIÓN</label>
+                                        <input type="text" class="form-control" name="descripcion" id="descripcion" required>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-2">
+                                        <label for="precio">PRECIO</label>
+                                        <input type="number" class="form-control" name="precio" id="precio" required>
+                                    </div>
+                                    <div class="form-group col-12 text-center mt-4" >
+                                        <button type="submit" class="btn btn-info">GUARDAR</button>
+                                    </div>
+                                </form>
+                                <div class="col-12" id="mensaje">
+                                </div>
+                            </div>
+                         <!-- Fin formulario de registro Productos -->
+
+                         <!-- Inicio lista productos -->
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="listaProductos">
+                                <table class="table table-striped mt-4">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">SKU</th>
+                                        <th scope="col">NOMBRE</th>
+                                        <th scope="col">DESCRIPCIÓN</th>
+                                        <th scope="col">PRECIO</th>
+                                        <th scope="col">&nbsp;</th>
+                                        <th scope="col">&nbsp;</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="filasProducto">
+                                      
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <!-- fin Lista de Productos -->
+                          </div>
+
+                    </div>
+                    <!-- Fin sección productos -->
+
+                    <!-- Inicio seccion de plazos -->
+                    <div class="col-12" style="display: none;" id="divPlazos">
+                        <h1 class="mt-4">Plazos</h1>
+                        <!-- Inicio menú plazos -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Agregar</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="btn_lista_plazo" data-bs-toggle="tab" data-bs-target="#contenedor_plazo" type="button" role="tab" aria-controls="contenedor_plazo" aria-selected="false">Lista</button>
+                            </li>
+                        </ul>
+                        <!-- fin menú plazos -->
+
+                        <!--Inicio formulario de registro Plazos -->
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <form class="row mt-4" method="post" id="formAltaPlazo">
+                                    <div class="form-group col-sm-12 col-md-4">
+                                        <label for="plazo">PLAZO</label>
+                                        <input type="text" class="form-control" name="plazo" id="plazo" required>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-4">
+                                        <label for="taza_normal">TAZA NORMAL</label>
+                                        <input type="number"  step="any" class="form-control" name="tasa_normal" id="tasa_normal" required>
+                                    </div>
+                                    <div class="form-group col-sm-12 col-md-4">
+                                        <label for="taza_puntual">TAZA PUNTUAL</label>
+                                        <input type="number"  step="any" class="form-control" name="tasa_puntual" id="tasa_puntual" required>
+                                    </div>
+                                    <div class="form-group col-12 text-center mt-4" >
+                                        <button type="submit" class="btn btn-info">GUARDAR</button>
+                                    </div>
+                                </form>
+                                <div class="col-12" id="mensajePlazo">
+                                </div>
+                            </div>
+                            <!--fin formulario de registro Plazos -->
+
+                            <!--Inicio Lista Plazos -->
+                            <div class="tab-pane fade" id="contenedor_plazo" role="tabpanel" aria-labelledby="contenedor_plazo">
+                                <table class="table table-striped mt-4">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">PLAZO</th>
+                                        <th scope="col">TASA NORMAL</th>
+                                        <th scope="col">TASA PUNTUAL</th>
+                                        <th scope="col">&nbsp;</th>
+                                        <th scope="col">&nbsp;</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="filasPlazo">
+                                      
+                                    </tbody>
+                                  </table>
+                            </div>
+                            <!--Fin Lista Plazos -->
+                          </div>
+                    </div>
+                    <!-- FIN seccion de plazos -->
+
+                    <!-- Inicio seccion de plazos -->
+                    <div class="col-12" style="display: none;" id="divCreditos">
+                    <h1>Cotizador</h1>
+                    <form class="row mt-4" method="post" id="formBuscarProd">
+                        <div class="form-group col-sm-12 col-md-6">
+                            <label for="sku-nombre">Intoduce SKU o nombre del producto</label>
+                            <input type="text" class="form-control" name="sku-nombre" id="sku-nombre" required>
+                        </div>
+                        <div class="form-group col-6 mt-4">
+                            <button type="submit" class="btn btn-info">BUSCAR</button>
+                        </div>
+                    </form>
+                    <table class="table table-striped mt-4">
+                        <thead>
+                          <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">SKU</th>
+                            <th scope="col">NOMBRE PRODUCTO</th>
+                            <th scope="col">PRECIO</th>
+                            <th scope="col">PLAZO</th>
+                            <th scope="col">ABONO NORMAL</th>
+                            <th scope="col">ABONO PUNTUAL</th>
+                            <th scope="col">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        <tbody id="filasBusqueda">
+                          <tr>
+                              <td>1</td>
+                              <td>1234567890</td>
+                              <td>TV 32" SAMSUMG</td>
+                              <td>$4500</td>
+                              <td>18 SEMANAS</td>
+                              <td>$330</td>
+                              <td>$280</td>
+                              <td><a href="#">Seleccionar</a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>1234567890</td>
+                            <td>TV 32" SAMSUMG</td>
+                            <td>$4500</td>
+                            <td>36 SEMANAS</td>
+                            <td>$350</td>
+                            <td>$3000</td>
+                            <td><a href="#">Seleccionar</a></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
